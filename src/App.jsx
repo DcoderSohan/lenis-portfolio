@@ -3,6 +3,7 @@ import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger"; // Import ScrollTrigger
 import { useGSAP } from "@gsap/react";
+import Nav from "./Components/Nav";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -52,7 +53,7 @@ function App() {
           image,
           {
             scale: 0,
-            opacity:0,
+            opacity: 0,
             ease: "none",
             scrollTrigger: {
               trigger: elem,
@@ -78,16 +79,12 @@ function App() {
           "start"
         );
     });
-    
-  }
-  
-);
-
-  
+  });
 
   return (
     <>
-      <div className="w-full bg-zinc-900">
+      <Nav />
+      <div className="w-full bg-zinc-900 pt-10">
         <div className="grid grid-elem cols-8 grid-rows-20 gap-2 overflow-hidden h-screen lg:h-auto">
           <div
             className="elem col-span-1 row-span-1"
@@ -294,8 +291,8 @@ function App() {
           <h1 className="text-3xl lg:text-8xl mb-4 uppercase font-['Changa']">
             Sohan Sarang
           </h1>
-          <h2 className="text-xl lg:text-5xl font-['Silkscreen']">
-            Web Developer
+          <h2 className="text-xl lg:text-4xl font-['Silkscreen']">
+            ウェブ開発者
           </h2>
         </div>
         <div className="w-full h-screen mx-auto py-96 relative z-10 text-center font-['Changa'] mt-10 flex items-center justify-center bg-blue-300">
